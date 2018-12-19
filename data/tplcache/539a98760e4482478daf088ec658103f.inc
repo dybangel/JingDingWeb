@@ -1,0 +1,1 @@
+[field:description function='cn_substr(html2text(@me),700)'/]

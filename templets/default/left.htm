@@ -1,0 +1,35 @@
+<div class="main_left">
+  <div class="leftitem">
+    <div class="tit">栏目导航</div>
+    <div class="cates">
+      <dl>
+        <dt>{dede:field name='typeid' function="GetTopTypename(@me)"/}</dt>
+        {dede:channel type=son}
+        <dd><a href="[field:typelink/]" title="[field:typename/]">[field:typename/]</a></dd>
+        {/dede:channel}
+      </dl>
+    </div>
+  </div>
+  <div class="leftitem">
+    <div class="tit">推荐产品</div>
+    {dede:arclist row=2 typeid=1}
+    <div class="tcp"> <a href="[field:arcurl/]" title="[field:title/]"> <img src="[field:litpic/]"  alt="[field:title/]" title="[field:title/]"/>
+      <p>[field:title/]</p>
+      </a> </div>
+    {/dede:arclist} </div>
+  <div class="leftitem">
+    <div class="tit"> 联系我们 </div>
+    <div class="lianxi">
+      <dl>
+        <dt>
+          <div>服务热线</div>
+          <div class="telx">{dede:global.cfg_dh/}</div>
+        </dt>
+        <!--大类-->
+        
+        <dd>手机:{dede:global.cfg_sj/}</dd>
+        <dd> 地址： {dede:global.cfg_dz/} </dd>
+      </dl>
+    </div>
+  </div>
+</div>

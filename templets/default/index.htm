@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="author" content="order by mubanzhijia.com" />
+<link  type="text/css" rel="stylesheet" href="{dede:global.cfg_cmsurl/}/skin/images/style.css" />
+<link  type="text/css" rel="stylesheet" href="{dede:global.cfg_cmsurl/}/skin/images/chinaz.css" />
+<script src="{dede:global.cfg_cmsurl/}/skin/images/jquery.js" language="javascript" ></script>
+<script src="{dede:global.cfg_cmsurl/}/skin/images/wenli.index.js" language="javascript" ></script>
+<script src="{dede:global.cfg_cmsurl/}/skin/images/wenli.vendors.js" language="javascript" ></script>
+<script language="javascript" src="{dede:global.cfg_cmsurl/}/skin/images/lrtk.js"></script>
+<script src="{dede:global.cfg_cmsurl/}/skin/images/jcarousellite.js" language="javascript" ></script>
+<script language="javascript" src="{dede:global.cfg_cmsurl/}/skin/images/slide.js"></script>
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript">
+$(document).ready(function(){
+	$(".cpzx_c").jCarouselLite({
+		btnPrev: ".cpzx_l",
+	btnNext: ".cpzx_r",
+	visible:4,
+	scroll:1,
+	speed: 1000,
+	auto: 1000,
+	onMouse:true,
+	    });
+});
+
+$(document).ready(function(){
+	$(".jdal_c").jCarouselLite({
+	visible:3,
+	scroll:1,
+	speed: 1000,
+	auto: 1000,
+	onMouse:true,
+	    });
+});
+$(document).ready(function(){
+	$(".hzkh_c").jCarouselLite({
+	visible:6,
+	scroll:1,
+	speed: 1000,
+	auto: 1000,
+	onMouse:true,
+	    });
+});
+
+
+</script>
+</head>
+
+<body>
+  <style>
+  .headline-bg.index-headline-bg {
+  height:680px;
+  overflow:hidden;
+  background:-webkit-linear-gradient(top,{dede:global.cfg_theme/},{dede:global.cfg_theme/});
+  background:-moz-linear-gradient(top,#0076d1,#5db8ff);
+  background:-o-linear-gradient(top,#0076d1,#5db8ff);
+  background:-ms-linear-gradient(top,#0076d1,#5db8ff)
+}
+</style>
+
+{dede:include filename="head.htm"/}
+<div class="cpzx">
+  <div class="cpzx_t" style="    height: 44px;"><font color="#7A7A7A" style="font-size: 1.5rem;">解决方案</font></div>
+  <div class="cpcon">
+    <!-- 左箭头 -->
+    <div class="cpzx_l"><img src="{dede:global.cfg_cmsurl/}/skin/images/rc_16.png" width="54" height="262" alt="" /></div>
+<!-- 轮播 -->
+    <div class="cpzx_c">
+      <ul>
+        {dede:arclist typeid=1}
+        <li> <a href="[field:global.cfg_cmsurl/]/plus/view.php?aid=[field:id]" title="[field:title/]"><img src="[field:litpic/]"  alt="[field:title/]" title="[field:title/]" width="246" height="183"/></a>
+          <p><a href="[field:global.cfg_cmsurl/]/plus/view.php?aid=[field:id]" title="[field:title/]">[field:title/]</a></p>
+        </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <!-- 右箭头 -->
+    <div class="cpzx_r"><img src="{dede:global.cfg_cmsurl/}/skin/images/rc_17.png" width="54" height="262" /></div>
+  </div>
+</div>
+<!--关于我们 -->
+<div class="gywm">
+  <div class="gywm_c">
+    <div class="gywm_p">{dede:arclist row=1 typeid=9}<img src="[field:litpic/]" width="427" height="354" alt="公司简介" />{/dede:arclist}</div>
+    <div class="gsjj"> {dede:sql sql='select body from dede_addonarticle where aid=8'}[field:body function='cn_substr(html2text(@me),700)'/]{/dede:sql}...... </div>
+    <div class="gywm_b"> <a href="{dede:type typeid=4}[field:typelink /]{/dede:type}"  title="公司简介"><img src="{dede:global.cfg_cmsurl/}/skin/images/rc_09.jpg" width="133" height="34" alt="公司简介" /></a> {dede:type typeid=4}<a href="[field:typelink/]"  title="[field:typename/]">{/dede:type}<img src="{dede:global.cfg_cmsurl/}/skin/images/rc_10.jpg" width="133" height="34" alt="[field:typename/]" /></a> </div>
+  </div>
+</div>
+
+<div class="headline-bg index-headline-bg wavesWapper">
+
+
+<!-- 新闻动态 -->
+<div class="khjz" style="position: absolute;">
+  <div class="khjz_t">{dede:type typeid=3}<a href="[field:typelink/]"  title="[field:typename/]"><img src="[field:global.cfg_cmsurl/]/skin/images/rc_19.png" width="308" height="56" alt="[field:typename/]" /></a>{/dede:type}</div>
+  <ul>
+    
+    {dede:arclist row=4 typeid=3}
+    <li>
+      <div class="khjz_m"><a href="[field:arcurl/]" title="[field:title/]"><img src="[field:litpic/]"  alt="[field:title/]" title="[field:title/]" width="191" height="145"/></a></div>
+      <div class="khjz_r">
+        <div class="jz_rt">
+          <p><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></p>
+          <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></div>
+        <div class="jz_rp">[field:description function="cn_substr(@me,140)"/]。。。。。</div>
+        <div class="jz_rb"><a href="[field:arcurl/]" title="[field:title/]"><img src="[field:global.cfg_cmsurl/]/skin/images/rc_24.jpg" width="70" height="16" alt="" /></a></div>
+      </div>
+    </li>
+    {/dede:arclist}
+  </ul>
+</div>
+
+    <canvas id="waves" class="waves" width="1106" height="575" style="width: 1106px; height: 575px;">
+     
+    </canvas>
+</div>
+
+<!-- 产品 -->
+<div class="jdal">
+  <div class="jdal_t">{dede:type typeid=2}<a href="[field:typelink/]"  title="[field:typename/]"><img src="[field:global.cfg_cmsurl/]/skin/images/rc_01.jpg" width="249" height="65" alt="" /></a>{/dede:type}</div>
+  <div class="jdal_c">
+    <ul>
+      {dede:arclist typeid=2}
+      <li> <a href="[field:arcurl/]" title="[field:title/]"><img  src="[field:litpic/]"  alt="[field:title/]" title="[field:title/]" width="376" height="219"/></a>
+        <p><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></p>
+      </li>
+      {/dede:arclist}
+    </ul>
+  </div>
+</div>
+<div class="lxwm">
+  <style>
+    .divhalf{
+      width: 50%;
+      height: 100%;
+      float: left;
+    }
+/*    .bgcorlor{
+
+      background-color: #0f7cb5;
+      }*/
+    .bgcorlor{
+      background-color: {dede:global.cfg_theme/};
+    }
+    .div25{
+      height: 25%;
+      width: 100%;
+      float: left;
+      padding-top: 27px;
+      position: absolute;
+      padding-left: 3.5rem;
+    }
+    .div75{
+      height: 75%;
+      width: 100%;
+      float: left;
+    }
+  </style>
+  <div class="lxwm_l">
+    <div class="divhalf bgcorlor">
+      <div class="div25">
+        <font style="font-size: 1.4rem;  color: #ffffff;">CONTACT US 联系我们</font>
+      </div>
+      <div class="div75">
+        
+         <p> 服务热线：{dede:global.cfg_tel/}<br />
+      手机：{dede:global.cfg_mobile/}<br />
+      公司地址：{dede:global.cfg_address/}<br />
+    </p>
+      </div>
+ 
+       
+    </div>
+    <div class="divhalf">
+        {dede:arclist row=1 typeid=8}
+      <img src="[field:litpic/]"></img>
+        {/dede:arclist}
+    </div>
+  
+
+  </div>
+  <div class="lxwm_r">
+    <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+      <input type="hidden" name="action" value="post" />
+      <input type="hidden" name="diyid" value="1" />
+      <input type="hidden" name="do" value="2" />
+      <p>姓名：</p>
+      <input name="name" type="text" class="lys1" value="" />
+      <p>电话：</p>
+      <input name="tel" type="text" class="lys1" value="" />
+      <p>留言内容：</p>
+      <textarea name="neirong" cols="" rows=""  class="lys3"></textarea>
+      <input name="" class="lyb1" type="submit" value="立即提交" />
+      <input type="hidden" name="dede_fields" value="name,text;tel,text;neirong,multitext" />
+      <input type="hidden" name="dede_fieldshash" value="8f33e7bc05f837aca70b6a06dd3f5df3" />
+    </form>
+  </div>
+</div>
+<div class="hzkh">
+  <div class="hzkh_t">合作客户</div>
+  <div class="hzkh_c">
+    <ul>
+      {dede:arclist typeid=6}
+      <li><a href="[field:arcurl/]" title="[field:title/]"><img src="[field:litpic/]"  alt="[field:title/]" title="[field:title/]" width="180" height="70"/></a></li>
+      {/dede:arclist}
+    </ul>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

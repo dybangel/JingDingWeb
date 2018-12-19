@@ -1,0 +1,1 @@
+<img src="[field:litpic/]" width="427" height="354" alt="公司简介" />

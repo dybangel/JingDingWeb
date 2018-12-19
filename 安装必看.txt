@@ -1,0 +1,6 @@
+数据库引擎mysql
+dbname jinding
+dbuser root
+dbpassword 123456
+web后台 admin admin
+数据库已经备份 

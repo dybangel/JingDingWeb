@@ -1,0 +1,38 @@
+<style>
+  .bgcolor{
+    background-color: #2e2e2e;
+  }
+  .qrcode{
+    {dede:arclist row=1 typeid=10}
+    background-image: url([field:litpic/]);
+    {/dede:arclist}
+    /*}skin/images/yt_18.jpg*/
+  }
+</style>
+<div class="footer bgcolor" >
+ <!--  <div class="links"> <span>友情链接</span>
+    <p> {dede:flink titlelen='20' row='10' type='text'}[field:link /]{/dede:flink} </p>
+  </div> -->
+  <div class="footer_c">
+    <div class="fpl qrcode">
+  
+      <div class="fnav"> <a href="/"  title="网站首页">网站首页</a> {dede:channel type='top'}
+        
+        ·<a href="[field:typeurl/]"  title="[field:typename/]">[field:typename/]</a> {/dede:channel} </div>
+      <div class="fb">
+        <p>{dede:global.cfg_powerby/}&nbsp; &nbsp; 备案号：{dede:global.cfg_beian/}<br />
+          公司座机：{dede:global.cfg_tel/}&nbsp; &nbsp;    手机：{dede:global.cfg_mobile/} &nbsp; &nbsp;       地址：{dede:global.cfg_address/}<br />
+          技术支持：<a href="http://www.mubanzhijia.com"  title="织梦模板之家">织梦模板之家</a></p>
+      </div>
+    </div>
+    <div class="fpr">
+      <div class="fss">
+        <form action="{dede:global.cfg_cmsurl/}/plus/search.php" method="post">
+          <input type="hidden" name="kwtype" value="0" />
+          <INPUT value="请输入关键词..." name="q" onclick="this.value=''" type="text" class="txt">
+          <input type="image" src="{dede:global.cfg_cmsurl/}/skin/images/sk_26.jpg" value="submit" style="float:right;width:30px;height:30px;margin-right:5px;">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
